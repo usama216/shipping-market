@@ -1,0 +1,6 @@
+# Railway Procfile
+# Web process - Nixpacks auto-starts nginx/php-fpm, we just need migrations
+web: php artisan migrate --force && php artisan optimize:clear
+
+# Worker process for queue jobs (deploy as separate Railway service)
+worker: php artisan queue:work --tries=3 --timeout=90

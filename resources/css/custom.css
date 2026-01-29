@@ -1,0 +1,46 @@
+:root {
+    --primary: #9E1D22;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    height: fit-content;
+    font-weight: 500;
+    padding: 5px 18px;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.nav-link-active {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    height: fit-content;
+    font-weight: 500;
+    padding: 5px 18px;
+    background-color: var(--primary);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+.data-table td {
+    background-clip: padding-box;
+    border: solid #c4c4c4;
+    border-width: 0 1px 1px;
+    box-sizing: border-box;
+    padding: 12px 15px
+}
+
+.data-table>thead th {
+    border: 1px solid #c4c4c4;
+    padding: 8px 15px;
+    position: relative;
+}
+
+.width-full {
+    width: 100% !important;
+}

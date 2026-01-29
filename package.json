@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@inertiajs/vue3": "^2.0.0",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/postcss": "^4.1.11",
+        "@tailwindcss/vite": "^4.1.11",
+        "@vitejs/plugin-vue": "^5.0.0",
+        "autoprefixer": "^10.4.21",
+        "axios": "^1.8.2",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^3.4.17",
+        "vite": "^6.2.4",
+        "vite-plugin-vue-devtools": "^8.0.5",
+        "vue": "^3.4.0"
+    },
+    "dependencies": {
+        "@heroicons/vue": "^2.2.0",
+        "@vue-stripe/vue-stripe": "^4.5.0",
+        "@vuepic/vue-datepicker": "^11.0.2",
+        "daisyui": "^5.0.50",
+        "filepond": "^4.32.8",
+        "filepond-plugin-file-validate-type": "^1.2.9",
+        "filepond-plugin-image-preview": "^4.6.12",
+        "install": "^0.13.0",
+        "npm": "^11.5.2",
+        "vue-filepond": "^7.0.4",
+        "vue-select": "^4.0.0-beta.6",
+        "vue-tel-input": "^9.5.1",
+        "vue-toastification": "^2.0.0-rc.5",
+        "vuedraggable": "^4.1.0"
+    }
+}

@@ -1,0 +1,22 @@
+# Railway/Nixpacks configuration for Laravel + Inertia/Vue
+# Nixpacks auto-detects PHP extensions from composer.json require section
+# See: https://nixpacks.com/docs/providers/php
+
+[variables]
+# Laravel's public directory as web root
+NIXPACKS_PHP_ROOT_DIR = "/app/public"
+# Router fallback for Laravel (all requests go through index.php) 
+NIXPACKS_PHP_FALLBACK_PATH = "/index.php"
+
+[phases.build]
+# Build frontend assets and cache Laravel (runs after install phase)
+cmds = [
+    "npm run build",
+    "php artisan config:cache",
+    "php artisan route:cache",
+    "php artisan view:cache"
+]
+
+[start]
+# Run migrations, seed database, then start nginx + php-fpm (Nixpacks default PHP start)
+cmd = "php artisan migrate --force && php artisan db:seed --force && node /assets/scripts/prestart.mjs /assets/nginx.template.conf /nginx.conf && (php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf)"
